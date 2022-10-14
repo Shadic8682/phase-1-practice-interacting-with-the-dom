@@ -5,7 +5,7 @@ const pause = document.querySelector("#pause");
 const counter = document.querySelector("#counter");
 const commentForm = document.querySelector("#comment-form");
 const list = document.querySelector("#list");
-const counterNum = parseInt(counter.textContent);
+let counterNum = parseInt(counter.textContent);
 
 minus.addEventListener("click", function(e) {
     counterNum--
@@ -29,12 +29,11 @@ function newComment(comment) {
     list.appendChild(p)
 }
 
-while(counterNum < 999){
-    setTimeout(() => {
-        counterNum++
-        console.log(counterNum)
-        counter.textContent = counterNum
-}, 1000)}
+setInterval(() => {
+            counterNum++
+            console.log(counterNum)
+            counter.textContent = counterNum
+    }, 1000)
 
 
 // pause.addEventListener("click", function(e) {
