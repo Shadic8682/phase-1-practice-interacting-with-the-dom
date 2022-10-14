@@ -7,7 +7,17 @@ const commentForm = document.querySelector("#comment-form");
 const list = document.querySelector("#list");
 
 minus.addEventListener("click", function(e) {
-    
+    let counterNum = parseInt(counter.textContent)
+    counterNum--
+    console.log(counterNum)
+    counter.textContent = counterNum
+})
+
+plus.addEventListener("click", function(e) {
+    let counterNum = parseInt(counter.textContent)
+    counterNum++
+    console.log(counterNum)
+    counter.textContent = counterNum
 })
 
 commentForm.addEventListener("submit", function(e) {
